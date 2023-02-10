@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IkM-XT-gON">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload Photo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="UploadPhotoVC" id="BYZ-38-t0r" customClass="UploadPhotoVC" customModule="DispatchGroup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QGf-jx-Iye">
+                                <rect key="frame" x="0.0" y="103" width="393" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4JC-fJ-fPE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gdT-6l-14j">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ed8-dD-Wof">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LOG-BZ-A4D"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UmU-oU-MXT"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLn-za-b5p">
+                                <rect key="frame" x="0.0" y="742" width="393" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="XYj-b3-i5s">
+                                        <rect key="frame" x="20" y="12" width="353" height="52"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M4-5L-8Fp">
+                                                <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="52"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Add Image">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addImageBtnAtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOy-jv-lif"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLM-cp-my6">
+                                                <rect key="frame" x="190.66666666666663" y="0.0" width="162.33333333333337" height="52"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Upload">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="uploadBtnAtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R5c-KR-DgP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="77r-ln-r59"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XYj-b3-i5s" firstAttribute="leading" secondItem="zLn-za-b5p" secondAttribute="leading" constant="20" id="AI1-ql-8tZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="XYj-b3-i5s" secondAttribute="trailing" constant="20" id="QTn-vx-X4F"/>
+                                    <constraint firstItem="XYj-b3-i5s" firstAttribute="top" secondItem="zLn-za-b5p" secondAttribute="top" constant="12" id="TFf-5e-Yxi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtn-zb-cPD">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-u1-IMb">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="color" systemColor="systemOrangeColor"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TW9-u1-IMb" firstAttribute="centerY" secondItem="rtn-zb-cPD" secondAttribute="centerY" id="4LG-rf-NFY"/>
+                                    <constraint firstItem="TW9-u1-IMb" firstAttribute="centerX" secondItem="rtn-zb-cPD" secondAttribute="centerX" id="UcD-R7-QB6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XYj-b3-i5s" secondAttribute="bottom" constant="12" id="9hW-Ac-2kj"/>
+                            <constraint firstItem="rtn-zb-cPD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Acm-kJ-mbA"/>
+                            <constraint firstItem="zLn-za-b5p" firstAttribute="top" secondItem="QGf-jx-Iye" secondAttribute="bottom" id="CZy-qz-Rh3"/>
+                            <constraint firstItem="QGf-jx-Iye" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FeR-Td-WsA"/>
+                            <constraint firstAttribute="bottom" secondItem="zLn-za-b5p" secondAttribute="bottom" id="O8v-DI-yCG"/>
+                            <constraint firstItem="zLn-za-b5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sry-LB-BRU"/>
+                            <constraint firstItem="zLn-za-b5p" firstAttribute="top" secondItem="QGf-jx-Iye" secondAttribute="bottom" id="T5V-qz-AbI"/>
+                            <constraint firstAttribute="bottom" secondItem="rtn-zb-cPD" secondAttribute="bottom" id="UGU-TR-TuP"/>
+                            <constraint firstItem="QGf-jx-Iye" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WgE-6T-xou"/>
+                            <constraint firstItem="rtn-zb-cPD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="X2p-bm-glf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zLn-za-b5p" secondAttribute="trailing" id="ez1-YY-GUD"/>
+                            <constraint firstItem="QGf-jx-Iye" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ukk-a9-l9G"/>
+                            <constraint firstAttribute="trailing" secondItem="rtn-zb-cPD" secondAttribute="trailing" id="yW3-ks-XTl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upload Photo" id="74b-0l-1M8"/>
+                    <connections>
+                        <outlet property="loaderView" destination="rtn-zb-cPD" id="h3F-pl-dfq"/>
+                        <outlet property="photosCollection" destination="QGf-jx-Iye" id="QDT-aU-yCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jle-0H-Gkl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IkM-XT-gON" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KuN-rS-edT">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tLH-Ub-Fhi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2E-3C-Nv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="-39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

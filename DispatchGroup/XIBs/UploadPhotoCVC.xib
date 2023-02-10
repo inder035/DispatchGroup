@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UploadPhotoCVC" customModule="DispatchGroup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="259" height="213"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="259" height="213"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3j-GH-2kw">
+                        <rect key="frame" x="8" y="8" width="243" height="197"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="e3j-GH-2kw" secondAttribute="bottom" constant="8" id="BLq-i2-YQP"/>
+                <constraint firstItem="e3j-GH-2kw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="PbH-Yu-4YR"/>
+                <constraint firstAttribute="trailing" secondItem="e3j-GH-2kw" secondAttribute="trailing" constant="8" id="Yj0-Gr-yOk"/>
+                <constraint firstItem="e3j-GH-2kw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="bwp-iP-ZOY"/>
+            </constraints>
+            <size key="customSize" width="259" height="213"/>
+            <connections>
+                <outlet property="photoView" destination="e3j-GH-2kw" id="4yg-Is-7km"/>
+            </connections>
+            <point key="canvasLocation" x="269.46564885496184" y="46.126760563380287"/>
+        </collectionViewCell>
+    </objects>
+</document>
